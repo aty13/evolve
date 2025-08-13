@@ -1,0 +1,9 @@
+{
+  "name": "evolve-frontend",
+  "version": "1.0.0",
+  "description": "Evolve Frontend - Transform Your Prompts, Amplify Your Results",
+  "scripts": {
+    "dev": "python3 -m http.server 3001",
+    "build": "echo 'Static frontend, no build needed'"
+  }
+}

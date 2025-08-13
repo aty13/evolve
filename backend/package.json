@@ -1,0 +1,19 @@
+{
+  "name": "evolve-backend",
+  "version": "1.0.0",
+  "description": "Evolve Backend - Transform Your Prompts, Amplify Your Results",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "deploy": "vercel"
+  },
+  "dependencies": {
+    "openai": "^4.20.1",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}

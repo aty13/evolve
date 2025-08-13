@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolve - Transform Your Prompts, Amplify Your Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧬 Evolve</h1>
+            <p class="slogan">Transform Your Prompts, Amplify Your Results</p>
+            <p class="description">Turn vague ideas into detailed, effective prompts that get better AI responses</p>
+            
+            <button id="infoBtn" class="info-btn" title="How it works">
+                <span class="info-icon">ℹ️</span>
+                <span class="info-text">How it works</span>
+            </button>
+            
+            <div class="about-section" id="aboutSection" style="display: none;">
+                <h3>How it works:</h3>
+                <p>🎯 <strong>Paste your rough prompt</strong> - anything from "help me write an email" to "create a workout plan"</p>
+                <p>🚀 <strong>AI analyzes and rewrites it</strong> using prompt engineering best practices</p>
+                <p>💡 <strong>Get explanations</strong> of what was improved and why it works better</p>
+                <p>📋 <strong>Copy the improved version</strong> to use with any AI tool</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>Your Rough Prompt</h2>
+                <textarea 
+                    id="originalPrompt" 
+                    placeholder="Paste your rough prompt here... (e.g., 'help me write an email')"
+                    rows="6"
+                ></textarea>
+                <div class="char-count">
+                    <span id="originalCount">0</span> characters
+                </div>
+
+                <button id="improveBtn" class="improve-btn" disabled>
+                    <span class="btn-text">Improve Prompt</span>
+                    <span class="btn-loading" style="display: none;">Improving...</span>
+                </button>
+            </section>
+
+            <section class="output-section" id="outputSection" style="display: none;">
+                <h2>Improved Prompt</h2>
+                <div class="prompt-comparison">
+                    <div class="improved-prompt">
+                        <textarea 
+                            id="improvedPrompt" 
+                            readonly
+                            rows="10"
+                        ></textarea>
+                        <div class="char-count">
+                            <span id="improvedCount">0</span> characters
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="improvements-explanation" id="improvementsExplanation" style="display: none;">
+                    <h3>What Was Improved</h3>
+                    <div id="improvementsList"></div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="copyBtn" class="copy-btn">
+                        <span class="copy-text">📋 Copy Improved Prompt</span>
+                        <span class="copy-success" style="display: none;">✅ Copied!</span>
+                    </button>
+                    <button id="explainBtn" class="explain-btn">💡 Explain What Changed</button>
+                    <button id="newPromptBtn" class="new-prompt-btn">Try Another Prompt</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Evolve - Built with OpenAI API • <a href="https://github.com" target="_blank">View Source</a></p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-message" id="loadingMessage">🧬 Evolving your prompt...</div>
+            <div class="loading-submessage" id="loadingSubmessage">Teaching AI the art of communication</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
