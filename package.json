@@ -1,0 +1,19 @@
+{
+  "name": "evolve",
+  "version": "1.0.0",
+  "description": "Evolve - Transform Your Prompts, Amplify Your Results",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "build": "echo 'Static site, no build needed'",
+    "start": "python3 -m http.server 3000"
+  },
+  "dependencies": {
+    "openai": "^4.20.1",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
